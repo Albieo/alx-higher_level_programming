@@ -11,4 +11,8 @@ if number > 0:
         print("and is less than 6 and not 0")
 else:
     i = int(str(number)[-1]) * -1
-    print(f"Last digit of {number} is {i} and is less than 6 and not 0")
+    if i == 0:
+        print(f"Last digit of {number} is {i} and is 0")
+    else:
+        print(f"Last digit of {number} is {i} ", end="")
+        print("and is less than 6 and not 0")
