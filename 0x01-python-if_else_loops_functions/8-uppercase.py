@@ -4,7 +4,7 @@ def uppercase(str):
         num = ord(i)
 
         def print_word():
-            print(chr(num), end="")
+            print("{}".format(chr(num)), end="")
         if num >= 97 and num <= 122:
             num -= 32
             print_word()
