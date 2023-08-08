@@ -11,4 +11,3 @@ def uppercase(str):
         else:
             print_word()
     print("\n", end="")
-
