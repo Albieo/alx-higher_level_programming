@@ -107,11 +107,9 @@ class Square():
         Print a visual representation of the square on the console.
         """
         if self.__size == 0:
-            print()
-        else:
-            for _ in range(self.__position[0]):
-                print()
-            for _ in range(self.__size):
-                if self.__position[1] > 0:
-                    print(" " * self.position[1], end="")
-                print("#" * self.__size)
+            print("")
+            return
+
+        print("\n" * self.__position[1])
+        for i in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
