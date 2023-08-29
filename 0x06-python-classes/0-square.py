@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Define a class Square."""
+
+
 class Square():
     """
     A class representing a square shape.
@@ -7,16 +10,5 @@ class Square():
 
     Attributes:
         None
-
-    Methods:
-        __init__(): Initialize a new square with default values.
     """
-
-    def __init__(self):
-        """
-        Initialize a new square.
-
-        Returns:
-            None
-        """
         pass
