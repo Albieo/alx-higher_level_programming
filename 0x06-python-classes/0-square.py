@@ -2,7 +2,7 @@
 """Define a class Square."""
 
 
-class Square():
+class Square:
     """
     A class representing a square shape.
 
