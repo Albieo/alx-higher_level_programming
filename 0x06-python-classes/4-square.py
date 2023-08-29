@@ -14,7 +14,8 @@ class Square():
             Initializes a new Square object with a specified size.
 
             Args:
-                size (int, optional): The size of the square's sides (default is 0).
+                size (int, optional): The size of the square's sides
+                                    (default is 0).
 
         area(self):
             Calculate and return the area of the square.
