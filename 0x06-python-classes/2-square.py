@@ -14,7 +14,8 @@ class Square():
             Initializes a new square with the specified size.
 
             Args:
-                size (int, optional): The size of the square's sides. Default is 0.
+                size (int, optional): The size of the square's sides.
+                                        Default is 0.
 
             Raises:
                 TypeError: If size is not an integer.
