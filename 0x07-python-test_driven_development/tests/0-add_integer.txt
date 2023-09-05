@@ -16,7 +16,7 @@ that value is equivalent to using the ``+`` operator.
     >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(1, 2)
     3
-    
+
     >>> add_integer(5, 7)
     12
 
@@ -45,7 +45,5 @@ that value is equivalent to using the ``+`` operator.
     >>> add_integer(2, "hello")
     Traceback (most recent call last):
     TypeError: b must be an integer
-
-
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
