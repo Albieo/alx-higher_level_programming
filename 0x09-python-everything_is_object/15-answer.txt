@@ -1,1 +1,1 @@
-SyntaxError: cannot assign to literal here.
+[1, 2, 3]
