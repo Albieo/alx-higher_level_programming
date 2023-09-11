@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Only sub class of """
+
+
 def inherits_from(obj, a_class):
     """
     Check if an object inherits from a specified class.
