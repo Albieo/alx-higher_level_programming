@@ -21,12 +21,3 @@ class Square(Rectangle):
         """
         super().__init__(size, size)
         self.__size = size
-
-    def area(self):
-        """
-        Calculate the area of the square.
-
-        Returns:
-            int: The area of the square, which is equal to the size squared.
-        """
-        return self.__size ** 2
