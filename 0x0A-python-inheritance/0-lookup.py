@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Lookup """
+
+
 def lookup(obj):
     """
     Get a list of attributes and methods associated with the given object.
