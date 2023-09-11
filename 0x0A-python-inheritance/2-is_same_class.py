@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Exact same object """
+
+
 def is_same_class(obj, a_class):
     """
     Check if the given object belongs to the specified class.
