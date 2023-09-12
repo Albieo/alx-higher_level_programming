@@ -11,7 +11,7 @@ def write_file(filename="", text=""):
                         an empty string is used.
         text (str): The text to be written to the file. If not provided,
                     an empty string is used.
-    
+
     Return:
         The number of characters written.
 
