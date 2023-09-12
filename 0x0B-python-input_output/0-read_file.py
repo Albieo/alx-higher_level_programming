@@ -11,12 +11,6 @@ def read_file(filename=""):
             an empty string is used, which will result in an error when
             attempting to open the file.
 
-    Raises:
-        FileNotFoundError: If the specified file does not exist or
-                           cannot be found.
-        IsADirectoryError: If the provided filename refers to a directory
-                           instead of a regular file.
-
     """
     with open(filename, "r") as file:
         print(file.read())
