@@ -19,5 +19,4 @@ def read_file(filename=""):
 
     """
     with open(filename) as file:
-        for lines in file:
-            print(lines)
+        print(file.read())
