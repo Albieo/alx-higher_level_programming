@@ -18,5 +18,5 @@ def read_file(filename=""):
                            instead of a regular file.
 
     """
-    with open(filename) as file:
+    with open(filename, "r") as file:
         print(file.read())
