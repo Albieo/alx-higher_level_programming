@@ -4,21 +4,18 @@
 
 class Student():
     """
-    A class representing a student with basic information.
-
-    Attributes:
-        first_name (str): The first name of the student.
-        last_name (str): The last name of the student.
-        age (int): The age of the student.
+    Represents a student with a first name, last name, and age.
     """
     def __init__(self, first_name, last_name, age):
         """
-        Initialize a new Student object.
+        Initializes a new Student instance.
 
-        Args:
-            first_name (str): The first name of the student.
-            last_name (str): The last name of the student.
-            age (int): The age of the student.
+        :param first_name: The first name of the student.
+        :type first_name: str
+        :param last_name: The last name of the student.
+        :type last_name: str
+        :param age: The age of the student.
+        :type age: int
         """
         self.first_name = first_name
         self.last_name = last_name
@@ -26,15 +23,9 @@ class Student():
 
     def to_json(self):
         """
-        Convert the Student object to a JSON-like dictionary.
+        Converts the student object to a JSON-compatible dictionary.
 
-        Returns:
-            dict: A dictionary containing
-                  the student's first name, last name, and age.
+        :return: A dictionary representation of the student object.
+        :rtype: dict
         """
-        obj_dict = {
-            "first_name": self.first_name,
-            "last_name": self.last_name,
-            "age": self.age
-        }
-        return obj_dict
+        return self.__dict__
