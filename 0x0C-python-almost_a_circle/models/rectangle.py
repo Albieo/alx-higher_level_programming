@@ -16,49 +16,53 @@ class Rectangle(Base):
 
     Methods:
         __init__(self, width, height, x=0, y=0, id=None):
-            Initializes a new Rectangle instance with the given width, height, and optional position and identifier.
+            Initializes a new Rectangle instance with the given width, height,
+            and optional position and identifier.
 
         width (property):
             Get the width of the rectangle.
 
         width (setter):
-            Set the width of the rectangle. Raises a TypeError if the value is not an integer,
-            and a ValueError if it's not > 0.
+            Set the width of the rectangle. Raises a TypeError if
+            the value is not an integer, and a ValueError if it's not > 0.
 
         height (property):
             Get the height of the rectangle.
 
         height (setter):
-            Set the height of the rectangle. Raises a TypeError if the value is not an integer,
-            and a ValueError if it's not > 0.
+            Set the height of the rectangle. Raises a TypeError if
+            the value is not an integer, and a ValueError if it's not > 0.
 
         x (property):
             Get the x-coordinate of the top-left corner of the rectangle.
 
         x (setter):
-            Set the x-coordinate of the top-left corner of the rectangle. Raises a TypeError if the value is not an integer,
+            Set the x-coordinate of the top-left corner of the rectangle.
+            Raises a TypeError if the value is not an integer,
             and a ValueError if it's not >= 0.
 
         y (property):
             Get the y-coordinate of the top-left corner of the rectangle.
 
         y (setter):
-            Set the y-coordinate of the top-left corner of the rectangle. Raises a TypeError if the value is not an integer,
+            Set the y-coordinate of the top-left corner of the rectangle.
+            Raises a TypeError if the value is not an integer,
             and a ValueError if it's not >= 0.
 
         area(self):
             Returns the area value of the reactangle instance.
 
         display(self):
-            Display the shape by printing it to the console as a grid of '#' characters.
+            Display the shape by printing it to the console as
+            a grid of '#' characters.
 
         __str__(self):
             Return a string representation of the shape object in the format:
             "[ClassName] (ID) X/Y - Width/Height"
 
         update(self, *args, **kwargs):
-            Update the attributes of an object of this class using positional arguments (*args)
-            and keyword arguments (**kwargs).
+            Update the attributes of an object of this class using
+            positional arguments (*args) and keyword arguments (**kwargs).
 
         to_dictionary(self):
             Returns a dictionary representation of the Rectangle.
@@ -174,15 +178,19 @@ class Rectangle(Base):
 
     def display(self):
         """
-        Display the shape by printing it to the console as a grid of '#' characters.
+        Display the shape by printing it to the console as
+        a grid of '#' characters.
 
-        If either the width or height of the shape is 0, it will display an empty string.
+        If either the width or height of the shape is 0, it will display
+        an empty string.
         """
         if self.__width == 0 or self.__height == 0:
             print("")
         else:
-            result = [" " * (self.__width - self.__x) for _ in range(self.__y)] + \
-                     [" " * self.__x + "#" * self.__width for _ in range(self.__height)]
+            result = [" " * (self.__width - self.__x)
+                      for _ in range(self.__y)] + \
+                     [" " * self.__x + "#" * self.__width
+                      for _ in range(self.__height)]
             print("\n".join(result))
 
     def __str__(self):
@@ -204,27 +212,30 @@ class Rectangle(Base):
         y = self.__y
         width = self.__width
         height = self.__height
-        return "[{}] ({}) {}/{} - {}/{}".format(class_name, id, x, y, width, height)
+        return "[{}] ({}) {}/{} - {}/{}".\
+            format(class_name, id, x, y, width, height)
 
     def update(self, *args, **kwargs):
         """
-        Update the attributes of an object of this class using positional arguments (*args)
-        and keyword arguments (**kwargs).
+        Update the attributes of an object of this class using positional
+        arguments (*args) and keyword arguments (**kwargs).
 
-        This method allows updating the object's attributes using either positional arguments or
-        keyword arguments. When using positional arguments, the order of arguments
-        should be (id, width, height, x, y).
+        This method allows updating the object's attributes using either
+        positional arguments or keyword arguments. When using positional
+        arguments, the order of arguments should be (id, width, height, x, y).
 
         Parameters:
         - args (*args): Positional arguments for updating object attributes.
                         The order should be (id, width, height, x, y).
 
         - kwargs (**kwargs): Keyword arguments for updating object attributes.
-                             Supported keywords are 'id', 'width', 'height', 'x', and 'y'.
+                             Supported keywords are 'id', 'width', 'height',
+                             'x', and 'y'.
 
         Note:
-        - When using both positional and keyword arguments, positional arguments take precedence
-          over keyword arguments for attribute updates.
+        - When using both positional and keyword arguments,
+          positional arguments take precedence over keyword arguments
+          for attribute updates.
 
         """
         if args:
@@ -249,7 +260,6 @@ class Rectangle(Base):
                 self.__x = kwargs['x']
             if "y" in kwargs:
                 self.__y = kwargs['y']
-
 
     def to_dictionary(self):
         """
