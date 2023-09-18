@@ -81,5 +81,6 @@ class TestRectangleValidation(unittest.TestCase):
             r.y = -6
         self.assertEqual(str(context.exception), "y must be >= 0")
 
+
 if __name__ == "__main__":
     unittest.main()

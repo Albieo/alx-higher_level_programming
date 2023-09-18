@@ -21,5 +21,6 @@ class TestRectangleDisplay(unittest.TestCase):
         r.display()
         self.assertEqual(self.stdout.getvalue(), expected_output)
 
+
 if __name__ == "__main__":
     unittest.main()
