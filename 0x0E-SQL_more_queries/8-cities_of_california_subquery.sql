@@ -1,3 +1,3 @@
 -- Cities of California
 -- a script that lists all the cities of California that can be found in the database hbtn_0d_usa.
-SELECT name FROM cities WHERE states_id = (SELECT id FROM states WHERE name = "California");
+SELECT id, name FROM cities WHERE states_id = (SELECT id FROM states WHERE name = "California") ORDER BY id ASC;
