@@ -19,6 +19,6 @@ const second = "Python is cool"
 const third = "JavaScript is amazing"
 const array = {first, second, third}
 
-for (i = 0; i < 3; i++) {
-    console.log(array[i])
+for (let key in array) {
+    console.log(array[key])
 }
