@@ -17,11 +17,7 @@ if __name__ == "__main__":
     new_state = State(name="Louisiana")
     session.add(new_state)
     name = "Louisiana"
-    states = session.query(State).filter(State.name == (name,)).\
+    states = session.query(State).filter_by(name).\
              order_by(State.id).first()
-    try:
-        print(states[0].id)
-    except IndexError:
-        print("Not found")
-
+    print(states.id)
     session.commit()
