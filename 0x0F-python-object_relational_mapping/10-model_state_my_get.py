@@ -15,7 +15,7 @@ if __name__ == "__main__":
     session = Session()
     name = sys.argv[4]
     states = session.query(State).filter(State.name == (name,)).\
-             order_by(State.id)
+            order_by(State.id)
     try:
         print(states[0].id)
     except IndexError:
