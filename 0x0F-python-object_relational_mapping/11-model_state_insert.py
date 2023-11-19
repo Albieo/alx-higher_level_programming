@@ -19,4 +19,3 @@ if __name__ == "__main__":
     session.commit()
     states = session.query(State).filter_by(name='Louisiana').first()
     print(states.id)
-
