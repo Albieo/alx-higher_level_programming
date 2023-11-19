@@ -12,7 +12,7 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
     cur.execute(""" SELECT cities.id, cities.name, states.name
                     FROM cities INNER JOIN states ON states.id=cities.state_id
-                    WHERE states.name = {}""".format(state_name))
+                    WHERE states.name = %s""", (state_name,))
     rows = cur.fetchall()
     for row in rows:
         print(row)
