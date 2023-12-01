@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import subprocess
+import sys
+
 
 def get_response_size(url):
     command = f"curl -s -o /dev/null -w '%{{size_download}}' {url}"
@@ -12,4 +14,5 @@ def get_response_size(url):
 
 
 if __name__ == "__main__":
+    url = sys.argv[1]
     get_response_size(url)
