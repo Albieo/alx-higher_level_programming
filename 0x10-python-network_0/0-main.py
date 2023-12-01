@@ -8,7 +8,7 @@ def get_response_size(url):
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     
     if result.returncode == 0:
-        print(f"Size of the response body in bytes: {result.stdout.strip()}")
+        print(result.stdout.strip())
     else:
         print("Error occurred while fetching response size.")
 
