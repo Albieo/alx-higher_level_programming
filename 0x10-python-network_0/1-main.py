@@ -4,7 +4,7 @@ import sys
 
 
 def get_response_body(url):
-    command = f"curl -s -f {url}"
+    command = f"curl -s -f -L {url}"
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     
     if result.returncode == 0:
