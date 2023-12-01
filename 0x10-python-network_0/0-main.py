@@ -5,8 +5,9 @@ import sys
 
 def get_response_size(url):
     command = f"curl -s -o /dev/null -w '%{{size_download}}' {url}"
-    result = subprocess.run(command, shell=True, capture_output=True, text=True)
-    
+    result = subprocess.run(command, shell=True, capture_output=True,
+                            text=True)
+
     if result.returncode == 0:
         print(result.stdout.strip())
     else:
