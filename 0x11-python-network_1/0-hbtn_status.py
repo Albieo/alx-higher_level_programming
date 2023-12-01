@@ -9,7 +9,10 @@ if __name__ == "__main__":
         raw_body = response.read()
         body = raw_body.decode('utf-8')
 
-    print("Body response:")
-    print("\t- type:", type(raw_body))
-    print("\t- content:", raw_body)
-    print("\t- utf8 content:", body)
+    lines = ["Body response:",
+         f"\t- type: {type(raw_body)}",
+         f"\t- content: {raw_body}",
+         f"\t- utf8 content: {body}"]
+
+    for line in lines:
+        print(line)
