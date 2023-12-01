@@ -4,13 +4,13 @@ import sys
 
 
 def get_response_body(url):
-    command = f"curl -s -o /dev/null -w '%{http_code}' -X GET {url}"
+    command = f"curl -s -f {url}"
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     
     if result.returncode == 0:
         print(result.stdout.strip())
     else:
-        print("Error occurred while fetching response size.")
+        print(None)
 
 
 if __name__ == "__main__":
