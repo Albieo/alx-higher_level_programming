@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""This module fetches data from a URL
+and prints information about the response."""
 import urllib.request
 
 

@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""A simple script to fetch and display information
+from a URL using the requests module.
+
+This script sends a GET request to 'https://alx-intranet.hbtn.io/status'
+using the requests module and displays information about the response body."""
 import requests
 
 
