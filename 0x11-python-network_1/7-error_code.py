@@ -5,18 +5,15 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: ./5-hbtn_header.py <URL>")
+        print("Usage: ./7-error_code.py <URL>")
         sys.exit(1)
 
     url = sys.argv[1]
 
     try:
         r = requests.get(url)
-        x_request_id = r.headers.get('X-Request-Id')
-
-        if x_request_id:
-            print(x_request_id)
-        else:
-            print("X-Request-Id header not found in the response.")
+        print(r.text)
+        if r.status_code >= 400:
+            print("Error code: {}".format(r.status_code))
     except requests.RequestException as e:
         print("Error accessing the URL: {}".format(e))

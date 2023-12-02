@@ -18,4 +18,4 @@ if __name__ == "__main__":
             else:
                 print("X-Request-Id header not found in the response.")
     except urllib.error.URLError as e:
-        print(f"Error accessing the URL: {e}")
+        print("Error accessing the URL: {}".format(e))

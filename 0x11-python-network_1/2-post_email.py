@@ -20,4 +20,4 @@ if __name__ == "__main__":
             body = response.read().decode('utf-8')
             print(body)
     except urllib.error.URLError as e:
-        print(f"Error accessing the URL: {e}")
+        print("Error accessing the URL: {}".format(e))
