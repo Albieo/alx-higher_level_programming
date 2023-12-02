@@ -10,9 +10,9 @@ if __name__ == "__main__":
         body = raw_body.decode('utf-8')
 
     lines = ["Body response:",
-         f"\t- type: {type(raw_body)}",
-         f"\t- content: {raw_body}",
-         f"\t- utf8 content: {body}"]
+             f"\t- type: {type(raw_body)}",
+             f"\t- content: {raw_body}",
+             f"\t- utf8 content: {body}"]
 
     for line in lines:
         print(line)
