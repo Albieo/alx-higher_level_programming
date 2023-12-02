@@ -18,6 +18,6 @@ if __name__ == "__main__":
     try:
         with urllib.request.urlopen(req) as response:
             body = response.read().decode('utf-8')
-            print(f"Response Body: {body}")
+            print(body)
     except urllib.error.URLError as e:
         print(f"Error accessing the URL: {e}")
