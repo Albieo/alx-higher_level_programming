@@ -2,7 +2,7 @@
 const fs = require('fs');
 
 function readFileContent (filePath) {
-  fs.readFile(filePath, 'utf8', (err, data) => {
+  fs.writeFile(filePath, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
     } else {
