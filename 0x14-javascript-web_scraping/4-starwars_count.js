@@ -4,6 +4,8 @@ const request = require('request');
 function countMoviesWithWedge (url) {
   const id = 18;
   const characterUrl = `https://swapi-api.alx-tools.com/api/people/${id}/`;
+  let count = 0;
+
   request(url, (error, response, body) => {
     if (error) {
       console.error(error);
@@ -14,10 +16,7 @@ function countMoviesWithWedge (url) {
       return;
     }
 
-    const filmData = JSON.parse(body).results;
-    let count = 0;
-
-    filmData.forEach((film) => {
+    JSON.parse(body).results.forEach((film) => {
       if (film.characters.includes(characterUrl)) {
         count++;
       }
