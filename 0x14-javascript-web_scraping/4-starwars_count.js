@@ -17,7 +17,7 @@ function countMoviesWithWedge (url) {
     const filmData = JSON.parse(body).results;
     let count = 0;
 
-    filmData.forEach(film => {
+    filmData.forEach((film) => {
       if (film.characters.includes(characterUrl)) {
         count++;
       }
