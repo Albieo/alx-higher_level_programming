@@ -1,3 +1,4 @@
-$(document).ready(function () {
-  $('header').css('color', '#FF0000');
-});
+(function ($) {
+  const header = $('header');
+  header.css('color', '#FF0000');
+})(window.jQuery);
